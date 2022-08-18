@@ -15,6 +15,8 @@ public class Principal {
         pizza2.preparar();
         pizza2.calentar();
         
+        // leer 211
+        
     }  
     
 }
