@@ -48,8 +48,6 @@ public class Pizza {
         this.masa = masa;
     }
     
-    
-    
     // 4.- Métodos Customer o personalizado
     public void preparar()
     {
