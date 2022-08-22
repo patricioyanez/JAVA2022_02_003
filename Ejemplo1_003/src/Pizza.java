@@ -29,6 +29,27 @@ public class Pizza {
     {
         this.nombre = nombre;
     }
+    
+    public String getTamano()
+    {
+        return this.tamano;
+    }
+    public void setTamano(String tamano)
+    {
+        this.tamano = tamano;
+    }
+    
+    public String getMasa()
+    {
+        return this.masa;
+    }
+    public void setMasa(String masa)
+    {
+        this.masa = masa;
+    }
+    
+    
+    
     // 4.- Métodos Customer o personalizado
     public void preparar()
     {
@@ -37,5 +58,13 @@ public class Pizza {
     public void calentar()
     {
         System.out.println("La pizza se está calentando...");
-    }    
+    }
+    
+    public void datos()
+    {
+        System.out.println("*** Nombre de la Pizza ***");
+        System.out.println("Nombre  : " + this.getNombre());
+        System.out.println("Tamaño  : " + this.getTamano());
+        System.out.println("Masa    : " + this.getMasa());
+    }
 }

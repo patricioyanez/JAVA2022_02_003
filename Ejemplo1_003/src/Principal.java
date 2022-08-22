@@ -16,9 +16,12 @@ public class Principal {
         pizza2.calentar();
         
         Pizza pizza3 = new Pizza("napolitana","familiar", "Gruesa");
-        
-        // leer 211
-        
+        pizza1.setNombre("Taxana"); // modifica el valor del atributo
+        pizza1.setTamano("Personal");
+        pizza1.setNombre("Texas con BBQ");
+        pizza1.datos();
+        pizza2.datos();
+        pizza3.datos();
     }  
     
 }
