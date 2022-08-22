@@ -15,6 +15,8 @@ public class Principal {
         pizza2.preparar();
         pizza2.calentar();
         
+        Pizza pizza3 = new Pizza("napolitana","familiar", "Gruesa");
+        
         // leer 211
         
     }  
