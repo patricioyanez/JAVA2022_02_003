@@ -11,7 +11,7 @@ public class Ciclos {
         
         while(contador < numero)
         { 
-            ++contador;// contador += 1;
+            contador++;// contador += 1;
             System.out.println("Numero:" + contador);
         }
     }
