@@ -19,5 +19,25 @@ public class Sentencias {
         {
             System.out.println("Ejemplo2: Los numeros NO son iguales");
         }
+        
+        int edad = 5;
+        if(edad < 12)
+        {
+            System.out.println("Ud es un niño");
+        }
+        else if(edad < 18)
+        {
+            System.out.println("Adolescente");
+        }
+        else if(edad < 65)
+        {
+            System.out.println("Adulto");
+        }
+        else
+        {
+            System.out.println("Adulto mayor");
+        }
+        
+        
     }
 }
