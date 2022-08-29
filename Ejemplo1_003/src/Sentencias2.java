@@ -33,9 +33,7 @@ public class Sentencias2 {
             String nombre;
             System.out.print("Escriba su nombre:");
             nombre = leer.next();
-            System.out.println("Gracias " + nombre + " por votar.");
-            
+            System.out.println("Gracias " + nombre + " por votar.");            
         }
-    }
-    
+    }    
 }
