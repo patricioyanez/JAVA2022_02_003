@@ -4,7 +4,8 @@ public class Ciclos3 {
         int numero = 10;
         
         //for(;;)
-        for(int indice = 1; indice <= numero; indice++)
+        //for(int indice = 1; indice <= numero; indice++)
+        for(int indice = 0; indice++ < numero;)
         {
             System.out.println("nro:" + indice);
         }
