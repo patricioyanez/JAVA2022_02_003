@@ -35,7 +35,7 @@ public class Ciclos2 {
         System.out.println("*** Mesa cerrada ***");
         System.out.println("Resultados:");
         System.out.println("Apruebo     : " + apruebo);
-        System.out.println("Apruebo     : " + rechazo);
+        System.out.println("Rechazo     : " + rechazo);
         System.out.println("Nulo/Blanco : " + otro);
         System.out.println("Total votos : " + (apruebo+rechazo+otro));
     }    
