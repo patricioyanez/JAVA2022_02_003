@@ -42,5 +42,10 @@ public class ClaseString {
         String valor3 = "   Elimina espacios     ";
         System.out.println("__" + valor3 + "__");
         System.out.println("__" + valor3.trim() + "__");
+        
+        String valor4 = "PGY2141-003D";
+        System.out.println("substring: " + valor4.substring(8));
+        System.out.println("substring: " + valor4.substring(8,11));
+        
     }
 }
