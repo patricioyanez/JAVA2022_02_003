@@ -5,29 +5,29 @@ public class GiftCard {
     private int clave;
     private int monto;
     private Date vencimiento;
-    private Trabajador trabajor;
+    private Trabajador trabajador; // COLABORACION
 
     public GiftCard() {
         this.codigo = 0;
         this.clave = 0;
         this.monto = 0;
         this.vencimiento = null;
-        this.trabajor = null;
+        this.trabajador = null;
     }
-    public GiftCard(long codigo, int clave, int monto, Date vencimiento, Trabajador trabajor) {
+    public GiftCard(long codigo, int clave, int monto, Date vencimiento, Trabajador trabajador) {
         this.codigo = codigo;
         this.clave = clave;
         this.monto = monto;
         this.vencimiento = vencimiento;
-        this.trabajor = trabajor;
+        this.trabajador = trabajador;
     }
 
     public Trabajador getTrabajor() {
-        return trabajor;
+        return trabajador;
     }
 
     public void setTrabajor(Trabajador trabajor) {
-        this.trabajor = trabajor;
+        this.trabajador = trabajor;
     }
 
     public long getCodigo() {
@@ -64,9 +64,19 @@ public class GiftCard {
 
     @Override
     public String toString() {
-        return "GiftCard{" + "codigo=" + codigo + ", clave=" + clave + ", monto=" + monto + ", vencimiento=" + vencimiento + ", trabajor=" + trabajor + '}';
+        return "GiftCard{" + "codigo=" + codigo + ", clave=" + clave + ", monto=" + monto + ", vencimiento=" + vencimiento + ", trabajador=" + trabajador + '}';
     }
     
+    public long generarCodigo(long codigo)
+    {
+        this.codigo = codigo +1;
+        return this.codigo;
+    }
     
-    
+    public void generarClave()
+    {
+        String rut = String.valueOf(this.trabajador.getRut());
+        rut = rut.substring(0, 4);
+        this.clave = Integer.parseInt(rut);
+    }
 }
