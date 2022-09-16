@@ -1,4 +1,7 @@
 
+import java.sql.Date;
+
+
 public class Principal {
     public static void main(String[] args) {
         long codigoInicial = 1000000000000l;
@@ -12,7 +15,9 @@ public class Principal {
         
         GiftCard g1 = new GiftCard();
         GiftCard g2 = new GiftCard();
-        
+        g1.setMonto(100000);
+        g1.setVencimiento(Date.valueOf("2023-08-01"));
+        g1.setTrabajor(t1);
         codigoInicial = g1.generarCodigo(codigoInicial);
         codigoInicial = g2.generarCodigo(codigoInicial);
         
@@ -28,5 +33,19 @@ public class Principal {
         g2.generarClave();
         System.out.println("Clave g1: " + g1.getClave());
         System.out.println("Clave g2: " + g2.getClave());
+        int saldo = g1.descontar(5000);
+        System.out.println("Saldo actual: " + saldo);
+        
+        
+        saldo = g1.descontar(500000);
+        if(saldo >= 0 )
+            System.out.println("Saldo actual: " + saldo);
+        else
+            System.out.println("El saldo no es suficiente");
+        
+        if(g1.validarVigencia())
+            System.out.println("Está vigente");
+        else
+            System.out.println("No está vigente");
     }
 }
