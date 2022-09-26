@@ -39,7 +39,9 @@ public class Puesto {
     }
 
     public String datos() {
-        return "Puesto: " + "\ncodigo   : " + codigo + "\nnombre    : " + nombre;
+            return "Puesto: " + 
+                    "\ncodigo           = " + codigo + 
+                    "\nnombre           = " + nombre;
     }
     
 }

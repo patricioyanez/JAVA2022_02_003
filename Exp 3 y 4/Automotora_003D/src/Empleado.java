@@ -83,11 +83,11 @@ public class Empleado {
 
     public String datos() {
         return "Empleado:" + 
-                "\nrut              =" + rut + 
-                "\nnombre           =" + nombre + 
-                "\ngenero           =" + genero + 
-                "\naños de Servicio =" + aniosServicios + 
-                "\nedad             =" + edad  + 
+                "\nrut              = " + rut + 
+                "\nnombre           = " + nombre + 
+                "\ngenero           = " + genero + 
+                "\naños de Servicio = " + aniosServicios + 
+                "\nedad             = " + edad  + 
                 "\n" + puesto.datos();
     }
     
