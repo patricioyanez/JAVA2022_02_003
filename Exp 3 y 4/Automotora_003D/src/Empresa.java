@@ -23,6 +23,7 @@ public class Empresa {
         }
         return false;
     }
+
     public void listar()
     {
         for (Empleado empleado : empleados) {
