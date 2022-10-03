@@ -24,5 +24,7 @@ public class Principal {
         ag1.setCarrera("Paleontología");
         ag1.setAprobado(false);
         System.out.println(ag1.toString());
+        
+        // realizar ejericicio 4_1_2
     }
 }
