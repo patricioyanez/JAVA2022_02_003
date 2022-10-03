@@ -16,6 +16,16 @@ public class AlumnoGratuidad extends Alumno {
         this.aprobado = aprobado;
     }
 
+    @Override
+    public String toString() {
+        return "*** Datos Alumno Gratuidad ***" + 
+                "\nRut      :   " + getRut()+ 
+                "\nNombre   :   " + getNombre() + 
+                "\nCarrera  :   " + getCarrera()+ 
+                "\nAprobado :   " + (this.aprobado?"Si":"No") 
+                ;
+    }
+
     public String datos() {
         return "*** Datos Alumno Gratuidad ***" + 
                 "\nRut      :   " + getRut()+ 
