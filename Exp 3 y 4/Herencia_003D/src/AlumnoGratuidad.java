@@ -25,7 +25,7 @@ public class AlumnoGratuidad extends Alumno {
                 "\nAprobado :   " + (this.aprobado?"Si":"No") 
                 ;
     }
-
+    // sobre escritura
     public String datos() {
         return "*** Datos Alumno Gratuidad ***" + 
                 "\nRut      :   " + getRut()+ 
@@ -33,6 +33,23 @@ public class AlumnoGratuidad extends Alumno {
                 "\nCarrera  :   " + getCarrera()+ 
                 "\nAprobado :   " + (this.aprobado?"Si":"No") 
                 ;
+    }
+    // sobre carga
+    public void calcularMatricula()
+    {
+        if(this.aprobado)
+            System.out.println("Matricula costo cero");
+        else
+            System.out.println("Debe esperar la aprobación");
+    }
+    public void calcularMatricula(int valor)
+    {
+        System.out.println("El valor es: " + valor);
+    }
+    public void calcularMatricula(int valor, int descuento)
+    {
+        int res = valor - (valor * descuento / 100);
+        System.out.println("El valor es: " + (int)res);
     }
     
 }

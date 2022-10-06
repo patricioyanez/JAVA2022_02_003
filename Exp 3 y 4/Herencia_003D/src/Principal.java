@@ -26,5 +26,9 @@ public class Principal {
         System.out.println(ag1.toString());
         
         // realizar ejericicio 4_1_2
+        
+        ag1.calcularMatricula();
+        ag1.calcularMatricula(122000);
+        ag1.calcularMatricula(122000, 10);
     }
 }
