@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Vista;
 
+import Modelo.Persona;
 import javax.swing.JOptionPane;
 
 /**
@@ -66,6 +63,11 @@ public class frmPersona extends javax.swing.JFrame {
         });
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnBuscar.setText("Buscar");
 
@@ -141,6 +143,23 @@ public class frmPersona extends javax.swing.JFrame {
         txtTelefono.setText("");
         txtRut.requestFocus();
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // TODO add your handling code here:
+        // validar???
+        
+        // validar todos los campos y traspasarlo al objeto persona
+        if(txtRut.getText().trim().length() < 1)
+        {
+            JOptionPane.showMessageDialog(this, "Falta especificar el rut");
+            txtRut.requestFocus();
+        }
+        else
+        {
+            Persona persona = new Persona();
+            persona.setRut(txtRut.getText().trim().toUpperCase());
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
