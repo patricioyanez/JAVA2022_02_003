@@ -134,7 +134,12 @@ public class frmPersona extends javax.swing.JFrame {
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Hola Mundo");
+        //JOptionPane.showMessageDialog(this, "Hola Mundo");
+        txtRut.setText("");
+        txtNombre.setText("");
+        txtDireccion.setText("");
+        txtTelefono.setText("");
+        txtRut.requestFocus();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
