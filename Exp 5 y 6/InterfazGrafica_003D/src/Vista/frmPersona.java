@@ -154,10 +154,31 @@ public class frmPersona extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Falta especificar el rut");
             txtRut.requestFocus();
         }
+        else if(txtNombre.getText().trim().length() < 1)
+        {
+            JOptionPane.showMessageDialog(this, "Falta especificar el nombre");
+            txtNombre.requestFocus();
+        }
+        else if(txtDireccion.getText().trim().length() < 1)
+        {
+            JOptionPane.showMessageDialog(this, "Falta especificar la dirección");
+            txtDireccion.requestFocus();
+        }
+        else if(txtTelefono.getText().trim().length() < 1)
+        {
+            JOptionPane.showMessageDialog(this, "Falta especificar el telefóno");
+            txtTelefono.requestFocus();
+        }
         else
         {
             Persona persona = new Persona();
             persona.setRut(txtRut.getText().trim().toUpperCase());
+            persona.setNombre(txtNombre.getText().trim().toUpperCase());
+            persona.setDireccion(txtDireccion.getText().trim().toUpperCase());
+            persona.setTelefono(txtTelefono.getText().trim().toUpperCase());
+
+            JOptionPane.showMessageDialog(this, "Los Datos son: " + persona.obtenerDatos());
+            
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
