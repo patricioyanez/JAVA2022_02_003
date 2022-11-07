@@ -60,6 +60,11 @@ public class frmMenu extends javax.swing.JFrame {
         mnu.setText("Salir");
 
         mnuCerrar.setText("Cerrar");
+        mnuCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuCerrarActionPerformed(evt);
+            }
+        });
         mnu.add(mnuCerrar);
 
         jMenuBar1.add(mnu);
@@ -89,6 +94,11 @@ public class frmMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         new frmAutomovil().setVisible(true);
     }//GEN-LAST:event_mnuAutomovilActionPerformed
+
+    private void mnuCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuCerrarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_mnuCerrarActionPerformed
 
     /**
      * @param args the command line arguments
