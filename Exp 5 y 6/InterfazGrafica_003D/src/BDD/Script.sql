@@ -1,10 +1,24 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- * Author:  patri
- * Created: 07-11-2022
- */
+CREATE DATABASE AUTOMOTORA;
 
+CREATE TABLE PERSONA
+(    
+    IDPERSONA           INT             PRIMARY KEY AUTO_INCREMENT,
+    RUT                 VARCHAR(10)     NOT NULL,
+    NOMBRE              VARCHAR(50)     NOT NULL,
+    DIRECCION           VARCHAR(100)    NOT NULL,
+    TELEFONO            VARCHAR(50)     NOT NULL,
+    UNIQUE(RUT)
+);
+
+CREATE TABLE ADMINISTRATIVO
+(
+    IDADMINISTRATIVO    INT             PRIMARY KEY AUTO_INCREMENT,
+    RUT                 INT             NOT NULL,
+    NOMBRE              VARCHAR(50)     NOT NULL,
+    APELLIDO            VARCHAR(50)     NOT NULL,
+    EDAD                INT             NOT NULL,
+    ALTURA              DECIMAL(3,2)    NOT NULL,
+    GENERO              VARCHAR(1)      NOT NULL,
+    SUELDO              INT             NOT NULL,
+    UNIQUE(RUT)
+)
