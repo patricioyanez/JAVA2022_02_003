@@ -14,6 +14,7 @@ CREATE TABLE ADMINISTRATIVO
 (
     IDADMINISTRATIVO    INT             PRIMARY KEY AUTO_INCREMENT,
     RUT                 INT             NOT NULL,
+    DV                  VARCHAR(1)      NOT NULL,
     NOMBRE              VARCHAR(50)     NOT NULL,
     APELLIDO            VARCHAR(50)     NOT NULL,
     EDAD                INT             NOT NULL,
