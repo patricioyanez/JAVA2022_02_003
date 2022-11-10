@@ -57,11 +57,11 @@ public class Persona {
         this.rut = "";
         this.nombre = "";
         this.direccion = "";
-        this.telefono = ""; 
+        this.apellido = ""; 
     }
 
     public String obtenerDatos() {
-        return "Persona{" + "rut=" + rut + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + '}';
+        return "Persona{" + "rut=" + rut + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + '}';
     }
     
     
