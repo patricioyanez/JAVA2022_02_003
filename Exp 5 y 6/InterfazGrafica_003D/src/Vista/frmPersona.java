@@ -1,6 +1,7 @@
 
 package Vista;
 
+import Controlador.CPersona;
 import Modelo.Persona;
 import javax.swing.JOptionPane;
 
@@ -189,9 +190,17 @@ public class frmPersona extends javax.swing.JFrame {
             persona.setNombre(txtNombre.getText().trim().toUpperCase());
             persona.setApellido(txtApellido.getText().trim().toUpperCase());
             persona.setDireccion(txtDireccion.getText().trim().toUpperCase());
-
-            JOptionPane.showMessageDialog(this, "Los Datos son: " + persona.obtenerDatos());
             
+            CPersona controlador = new CPersona();
+            boolean respuesta = controlador.agregar(persona);
+            if(respuesta)
+            {
+                JOptionPane.showMessageDialog(this, "Datos guardados");
+                btnLimpiar.doClick();
+            }
+            else
+                JOptionPane.showMessageDialog(this, "Error en la solicitud");
+            // EJERCICIOS: crear Controlador para automovil    
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
