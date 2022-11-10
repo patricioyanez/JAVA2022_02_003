@@ -1,12 +1,12 @@
 
-
+DROP TABLE PERSONA;
 CREATE TABLE PERSONA
 (    
     IDPERSONA           INT             PRIMARY KEY AUTO_INCREMENT,
     RUT                 VARCHAR(10)     NOT NULL,
     NOMBRE              VARCHAR(50)     NOT NULL,
+    APELLIDO            VARCHAR(50)     NOT NULL,
     DIRECCION           VARCHAR(100)    NOT NULL,
-    TELEFONO            VARCHAR(50)     NOT NULL,
     UNIQUE(RUT)
 );
 
@@ -14,7 +14,6 @@ CREATE TABLE ADMINISTRATIVO
 (
     IDADMINISTRATIVO    INT             PRIMARY KEY AUTO_INCREMENT,
     RUT                 INT             NOT NULL,
-    DV                  VARCHAR(1)      NOT NULL,
     NOMBRE              VARCHAR(50)     NOT NULL,
     APELLIDO            VARCHAR(50)     NOT NULL,
     EDAD                INT             NOT NULL,
