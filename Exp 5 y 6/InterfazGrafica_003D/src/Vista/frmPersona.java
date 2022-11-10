@@ -187,8 +187,8 @@ public class frmPersona extends javax.swing.JFrame {
             Persona persona = new Persona();
             persona.setRut(txtRut.getText().trim().toUpperCase());
             persona.setNombre(txtNombre.getText().trim().toUpperCase());
-            persona.setDireccion(txtApellido.getText().trim().toUpperCase());
-            persona.setApellido(txtDireccion.getText().trim().toUpperCase());
+            persona.setApellido(txtApellido.getText().trim().toUpperCase());
+            persona.setDireccion(txtDireccion.getText().trim().toUpperCase());
 
             JOptionPane.showMessageDialog(this, "Los Datos son: " + persona.obtenerDatos());
             
