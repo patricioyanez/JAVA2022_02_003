@@ -4,28 +4,28 @@ package Modelo;
 public class Persona {
     private String rut;
     private String nombre;
+    private String apellido;
     private String direccion;
-    private String telefono;
 
     public Persona() {
         this.rut = "";
         this.nombre = "";
         this.direccion = "";
-        this.telefono = "";
+        this.apellido = "";
     }
-    public Persona(String rut, String nombre, String direccion, String telefono) {
+    public Persona(String rut, String nombre, String apellido, String direccion) {
         this.rut = rut;
         this.nombre = nombre;
         this.direccion = direccion;
-        this.telefono = telefono;
+        this.apellido = apellido;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getRut() {
