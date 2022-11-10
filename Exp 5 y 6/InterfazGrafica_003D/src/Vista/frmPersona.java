@@ -33,8 +33,8 @@ public class frmPersona extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtRut = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
-        txtTelefono = new javax.swing.JTextField();
         btnLimpiar = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
@@ -52,9 +52,9 @@ public class frmPersona extends javax.swing.JFrame {
 
         jLabel3.setText("Nombre");
 
-        jLabel4.setText("Dirección");
+        jLabel4.setText("Apellido");
 
-        jLabel5.setText("Teléfono");
+        jLabel5.setText("Dirección");
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -95,8 +95,8 @@ public class frmPersona extends javax.swing.JFrame {
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNombre)
+                            .addComponent(txtApellido)
                             .addComponent(txtDireccion)
-                            .addComponent(txtTelefono)
                             .addComponent(txtRut, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnLimpiar)
@@ -129,11 +129,11 @@ public class frmPersona extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5)
-                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLimpiar)
@@ -152,8 +152,8 @@ public class frmPersona extends javax.swing.JFrame {
         //JOptionPane.showMessageDialog(this, "Hola Mundo");
         txtRut.setText("");
         txtNombre.setText("");
+        txtApellido.setText("");
         txtDireccion.setText("");
-        txtTelefono.setText("");
         txtRut.requestFocus();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
@@ -172,23 +172,23 @@ public class frmPersona extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Falta especificar el nombre");
             txtNombre.requestFocus();
         }
-        else if(txtDireccion.getText().trim().length() < 1)
+        else if(txtApellido.getText().trim().length() < 1)
         {
             JOptionPane.showMessageDialog(this, "Falta especificar la dirección");
-            txtDireccion.requestFocus();
+            txtApellido.requestFocus();
         }
-        else if(txtTelefono.getText().trim().length() < 1)
+        else if(txtDireccion.getText().trim().length() < 1)
         {
             JOptionPane.showMessageDialog(this, "Falta especificar el telefóno");
-            txtTelefono.requestFocus();
+            txtDireccion.requestFocus();
         }
         else
         {
             Persona persona = new Persona();
             persona.setRut(txtRut.getText().trim().toUpperCase());
             persona.setNombre(txtNombre.getText().trim().toUpperCase());
-            persona.setDireccion(txtDireccion.getText().trim().toUpperCase());
-            persona.setTelefono(txtTelefono.getText().trim().toUpperCase());
+            persona.setDireccion(txtApellido.getText().trim().toUpperCase());
+            persona.setApellido(txtDireccion.getText().trim().toUpperCase());
 
             JOptionPane.showMessageDialog(this, "Los Datos son: " + persona.obtenerDatos());
             
@@ -245,9 +245,9 @@ public class frmPersona extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtRut;
-    private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }
