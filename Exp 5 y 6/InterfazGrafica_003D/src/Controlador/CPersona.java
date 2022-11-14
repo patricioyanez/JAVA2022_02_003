@@ -69,10 +69,10 @@ public class CPersona {
             String sql = "UPDATE PERSONA SET NOMBRE = ?, APELLIDO = ?, DIRECCION = ? WHERE RUT = ?";
             
             PreparedStatement stmt = cnx.prepareStatement(sql);
-            stmt.setString(1, persona.getRut());
-            stmt.setString(2, persona.getNombre());
-            stmt.setString(3, persona.getApellido());
-            stmt.setString(4, persona.getDireccion());
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellido());
+            stmt.setString(3, persona.getDireccion());
+            stmt.setString(4, persona.getRut());
             
             stmt.executeUpdate();
             stmt.close();
