@@ -1,10 +1,12 @@
 package Controlador;
 import Conexion.Conexion;
 import Modelo.Persona;
+import java.awt.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -103,4 +105,30 @@ public class CPersona {
         }
         return false;
     }
+
+    public ArrayList<Persona> buscarTodos()
+    {
+        try {
+            Connection cnx = conexion.obtenerConexion();
+            String sql = "SELECT * FROM PERSONA";
+            PreparedStatement ps = cnx.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            ArrayList<Persona> listado = new ArrayList<Persona>();
+            
+            while(rs.next())
+            {
+                Persona persona = new Persona();
+                persona.setRut(rs.getString("RUT"));
+                persona.setNombre(rs.getString("NOMBRE"));
+                persona.setApellido(rs.getString("APELLIDO"));
+                persona.setDireccion(rs.getString("DIRECCION"));
+                listado.add(persona);
+            }
+            return listado;
+        } catch (SQLException ex) {
+            Logger.getLogger(CPersona.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
 }
