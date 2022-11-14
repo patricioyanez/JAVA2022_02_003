@@ -292,6 +292,7 @@ public class frmPersona extends javax.swing.JFrame {
             }
             else
                 JOptionPane.showMessageDialog(this, "Error en la solicitud");
+        }
     }//GEN-LAST:event_btnModificarActionPerformed
 
     /**
