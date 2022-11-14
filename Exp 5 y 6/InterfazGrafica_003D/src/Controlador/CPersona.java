@@ -61,4 +61,27 @@ public class CPersona {
         }
         return null;
     }
+    
+    public boolean modificar(Persona persona)
+    {
+        try {
+            Connection cnx = conexion.obtenerConexion();
+            String sql = "UPDATE PERSONA SET NOMBRE = ?, APELLIDO = ?, DIRECCION = ? WHERE RUT = ?";
+            
+            PreparedStatement stmt = cnx.prepareStatement(sql);
+            stmt.setString(1, persona.getRut());
+            stmt.setString(2, persona.getNombre());
+            stmt.setString(3, persona.getApellido());
+            stmt.setString(4, persona.getDireccion());
+            
+            stmt.executeUpdate();
+            stmt.close();
+            cnx.close();
+            return true;
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(CPersona.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }
