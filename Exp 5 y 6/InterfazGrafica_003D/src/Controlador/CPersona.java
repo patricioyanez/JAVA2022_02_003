@@ -108,12 +108,12 @@ public class CPersona {
 
     public ArrayList<Persona> buscarTodos()
     {
+        ArrayList<Persona> listado = new ArrayList<Persona>();
         try {
             Connection cnx = conexion.obtenerConexion();
             String sql = "SELECT * FROM PERSONA";
             PreparedStatement ps = cnx.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-            ArrayList<Persona> listado = new ArrayList<Persona>();
             
             while(rs.next())
             {
@@ -124,11 +124,10 @@ public class CPersona {
                 persona.setDireccion(rs.getString("DIRECCION"));
                 listado.add(persona);
             }
-            return listado;
         } catch (SQLException ex) {
             Logger.getLogger(CPersona.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return listado;
     }
 
 }
