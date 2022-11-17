@@ -225,6 +225,8 @@ public class frmPersona extends javax.swing.JFrame {
         txtRut.requestFocus();        
         btnEliminar.setEnabled(false);
         btnModificar.setEnabled(false);
+        
+        // Actividad: Realizar CRUD para tabla automovil
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
